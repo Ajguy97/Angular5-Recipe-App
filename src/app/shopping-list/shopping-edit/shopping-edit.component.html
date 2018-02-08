@@ -1,0 +1,34 @@
+<div class="row">
+  <div class="col-xs-12">
+    <!-- start of form -->
+    <form (ngSubmit)="addItem(f)" #f="ngForm">
+      <div class="row">
+        <div class="col-sm-5 form-group">
+          <!-- Template driven appraoch needs ngModel for all controls -->
+          <label for="name">Name</label>
+          <input type="text" id="name" class="form-control" name="name" ngModel required>
+
+        </div>
+        <div class="col-sm-2 form-group">
+          <label for="amount">Amount</label>
+          <input type="number" id="amount" class="form-control" name="amount" ngModel required pattern="^[1-9]+[0-9]*$">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <!-- Button is disabled if the form isnt valid => valid is a property of f : NgForm  -->
+          <button class="btn btn-success" type="submit" [disabled]="!f.valid">{{ editMode? 'Update' : 'Add' }}</button>
+          <!-- if we are in edit mode show the delete button -->
+          <span *ngIf="editMode">
+            <button class="btn btn-danger" type="button" (click)="deleteItem()">Remove</button>
+          </span>
+          <!-- show clear button only if values arent empty or in edit mode -->
+          <span *ngIf="(f.value.name !== '' && f.value.amount !== null) || editMode">
+            <button class="btn btn-primary" type="button" (click)="clearInput()">Clear</button>
+          </span>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div>

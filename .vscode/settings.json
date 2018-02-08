@@ -1,0 +1,7 @@
+{
+  "explorer.sortOrder": "type",
+  "files.exclude": {
+    "__error": "Not found",
+    "src\\favicon.ico": true
+  }
+}
