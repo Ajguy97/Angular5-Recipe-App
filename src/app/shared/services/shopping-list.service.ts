@@ -13,6 +13,11 @@ export class ShoppingListService {
     new Ingredient('Orange', 10)
   ];
 
+  setIngredients(i : Ingredient[]){
+    this.ingredients = i;
+    this.updateList.next(i);
+  }
+
   getIngredients() {
     return this.ingredients.slice();
   }

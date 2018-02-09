@@ -1,10 +1,7 @@
 <div class="row">
   <div class="col-xs-12">
-    <button 
-    routerLink="new" 
-    class="btn btn-success">
-    New Recipe</button>
-  </div>
+ <h1 class="bold" >My Recipes</h1>
+</div>
 </div>
 <hr>
 <div class="row">
@@ -12,16 +9,26 @@
     <!-- 
     recipeIndex is used for showing the selected recipe item
     then showing the recipe detail about it
+    -> at router link
 
-    - ofcourse this is just one way to do it
-    -> just showing that we can use @Input to one way bind
-
+    -Binding from view to data source needs @Input
     -->
+    
+   
     <app-recipe-item 
     *ngFor="let recipeEl of recipes; let recipeIndex = index" 
     [recipe]="recipeEl" 
     [index]="recipeIndex">
     </app-recipe-item>
-
   </div>
 </div>
+    <div class="row">
+    <div class="col-xs-12">
+      <br>
+        <button 
+        routerLink="new" 
+        class="btn btn-success btn-lg">
+        New Recipe</button>
+      </div>
+    </div>
+  

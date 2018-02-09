@@ -11,16 +11,20 @@ import { AuthGuard } from "../shared/services/auth-guard.service";
 import { AuthInterceptor } from "../shared/services/auth.interceptor";
 import { HTTP_INTERCEPTORS } from "@angular/common/http";
 import { LoggingInterceptor } from "../shared/services/logging.interceptor";
+import { FooterComponent } from './footer/footer.component';
+
 
 
 //good practice to provide all services in a core module 
 //then importing this core module to app module
 //makes app module cleaner
 
+
 @NgModule({
     declarations: [
         HeaderComponent,
-        HomeComponent
+        HomeComponent,
+        FooterComponent
     ],
     imports: [
         SharedModule,
@@ -28,7 +32,8 @@ import { LoggingInterceptor } from "../shared/services/logging.interceptor";
     ],
     exports: [
         AppRoutingModule,
-        HeaderComponent // exporting this because app component uses header
+        HeaderComponent, // exporting this because app component uses header
+        FooterComponent
     ],
     providers : [
         ShoppingListService,

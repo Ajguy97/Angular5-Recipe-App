@@ -8,7 +8,9 @@ import { Recipe } from '../../../shared/recipe.model';
   styleUrls: ['./recipe-item.component.css']
 })
 export class RecipeItemComponent implements OnInit {
+//these values is taken from recipe list component
 @Input() recipe: Recipe;
+
 @Input() index: number;
 
   ngOnInit() {

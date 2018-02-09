@@ -3,6 +3,7 @@ import { Component, OnInit, OnDestroy} from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
 import { Recipe } from '../../shared/recipe.model';
 import { RecipeService } from '../../shared/services/recipe.service';
+import { ServerService } from '../../shared/services/server.service';
 
 @Component({
   selector: 'app-recipe-list',
@@ -16,11 +17,16 @@ export class RecipeListComponent implements OnInit, OnDestroy {
   
   //Array of recipes to loop through 
   recipes: Recipe[];
+  
 
-  constructor(private recipeService: RecipeService) { }
+  constructor(private recipeService: RecipeService
+       ) { }
 
   //Good practice to initialize anything in here rather than constructor
   ngOnInit() {
+
+    
+
     this.recipes = this.recipeService.getRecipes();
 
     this.subscription = this.recipeService.recipesChanged
@@ -37,5 +43,6 @@ export class RecipeListComponent implements OnInit, OnDestroy {
       this.subscription.unsubscribe();
     }
   }
+
 
 }

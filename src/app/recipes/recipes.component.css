@@ -1,0 +1,19 @@
+#recipe-div{
+    padding-top: 50px;
+    background-color: rgb(255, 255, 255);
+    background-size: cover;
+    min-height: 100%;
+    width: 100%;
+    
+}
+
+/* #stage{
+    background: url('../../shared/images/chicken.jpg') center center no-repeat;
+    background-size: cover;
+    color: white;
+    height: 90%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.4);
+} */

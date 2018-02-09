@@ -14,7 +14,7 @@ export class RecipeEditComponent implements OnInit {
 id : number;
 editMode = false;
 recipeForm: FormGroup;
-
+title: string;
   constructor(
     private route: ActivatedRoute,
     private recipeService : RecipeService,
@@ -30,6 +30,7 @@ recipeForm: FormGroup;
         this.editMode = (params['id'] != null);
       }
     );
+    this.title = this.editMode ? 'Edit Recipe' : 'New Recipe';
     this.InitForm();
   }
 

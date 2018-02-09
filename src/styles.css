@@ -1,1 +1,68 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,body{
+    height: 100%;
+}
+body {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    color:#6c6f73;
+    background-color: black;  
+}
+h1,h2,h3,h4,h5{
+    color: #333;
+}
+h6{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+}
+
+img{
+    max-width: 100%;
+}
+
+.blockquote{
+    font-size: 1.6rem;
+    color: #333;
+    border:none;
+    padding: 0;
+}
+
+.blockqoute-footer{
+    margin: 1rem 0 0;
+}
+/* button classes */
+.btn-margin-left {
+    margin-left: 5px;
+}
+.btn-margin-right {
+    margin-right: 5px;
+}
+.btn-margin-top{
+    margin-top: 5px;
+}
+.btn-margin-bottom{
+    margin-bottom: 5px;
+}
+
+.navbar{
+    margin-bottom: 0;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.container-fluid{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.alert {
+    margin-bottom: 1px;
+    height: 35px;
+    line-height:30px;
+    padding:0px 15px;
+  }

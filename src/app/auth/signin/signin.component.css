@@ -1,0 +1,10 @@
+h1{
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.wrapper{
+    background-color: white;
+    height:80%;
+    width: 100%;
+}

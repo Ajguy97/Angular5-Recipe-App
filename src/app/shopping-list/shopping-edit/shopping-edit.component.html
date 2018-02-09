@@ -1,6 +1,16 @@
 <div class="row">
   <div class="col-xs-12">
+    <h1 class="bold">Add to Shopping List</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
     <!-- start of form -->
+
+    <!-- 
+      Template driven form approach needs to add local reference form
+    as a parameter to submit click 
+  -->
     <form (ngSubmit)="addItem(f)" #f="ngForm">
       <div class="row">
         <div class="col-sm-5 form-group">
